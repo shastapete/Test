@@ -1,0 +1,993 @@
+/*
+Theme Name: UserTheme
+Theme URI: http://userpress.org/usertheme
+Author: UserPress
+Author URI: http://userpress.org
+Version: 2.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: userpress
+Description: Default UserPress theme. Built on Zurb's Foundation responsive CSS framework. Optimized for BuddyPress. 
+Tags: two-columns, minimalist, whitespace, responsive, foundation, framework
+*/
+
+
+
+/* -----------------------------------------
+   General Formatting
+----------------------------------------- */
+body {margin-top:65px;}
+
+body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
+
+h1,h2,h3,h4,h5,h6,a:link {font-weight:400;}
+
+h1 { font-size:1.9em; }
+
+h2 { font-size:1.7em; }
+
+h3 { font-size:1.5em; }
+
+
+
+select {
+	padding:0;
+	}
+
+/* -----------------------------------------
+   FORMS
+----------------------------------------- */
+
+#flagModal .flag-description {
+font-size:12px;
+}
+
+/* -----------------------------------------
+   Rows & Wrappers
+----------------------------------------- */
+.row {
+max-width:1050px;
+}
+
+.main-wrapper {
+background:#fff;
+padding-top:25px;
+padding-left:50px;
+padding-right:50px;
+}
+
+#container {
+margin-bottom:30px;
+}
+
+
+
+/* -----------------------------------------
+   Header
+----------------------------------------- */
+
+.header { 	
+  background: #fff;
+  height: 46px;
+  margin:0 0 10px 0;
+  border-bottom:2px solid #eee;
+  z-index:100;
+  position:fixed;
+  top:0;
+  width:100%;
+}
+
+
+.site-header {padding:3.5rem 0 0 0;margin:-1.875em 0 0 0; }
+
+
+
+
+
+/* -----------------------------------------
+   Index Grid
+----------------------------------------- */
+
+.index-grid {
+padding-top:10px;
+}
+
+.index-grid li {
+font-size:0.8em;
+}
+
+.toc ol li ul li {
+list-style:lower-roman;
+}
+
+.thumbnail-placeholder {
+width:125px;
+height:70px;
+background:#f2f2f2;
+border:1px solid #ddd;
+float:left;
+}
+
+
+.page-result {
+padding-bottom:15px;
+padding-top:15px;
+padding-left:7px;
+border-bottom:1px solid #eee;
+}
+
+.page-result h4 a {
+color:#222;
+font-weight:100;
+}
+
+
+
+
+/* -----------------------------------------
+   Post Meta
+----------------------------------------- */
+
+.last-modified {
+margin-top:30px;
+color:#999;
+text-align:right;
+}
+
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+
+.wp-caption-text {text-align: center;}
+.sticky { }
+.gallery-caption { }
+.bypostauthor{ }
+.site-content .gallery {
+  margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+  border: none;
+  height: auto;
+  max-width: 90%;
+}
+.site-content .gallery dd {
+  margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+
+
+
+/* -----------------------------------------
+   Buttons
+----------------------------------------- */
+
+
+.button, .button .small {
+padding:5px 25px 10px 25px;
+height:30px;
+margin:0;
+}
+
+.button.large {
+padding:10px 25px 10px 25px;
+min-height:45px;
+}
+
+
+div.bbsub-container {
+	font-size:14px;
+	line-height:1.8em;
+	height:24px;	
+	}
+
+div.bbsub-container a {
+	font-size:14px;
+	margin:10px 15px 10px 10px;
+	font-weight:normal; 
+	letter-spacing:0px;	
+}
+	
+div.bb-button {
+	margin:2px;
+	border-radius: 3px;
+	border:1px solid #ccc;
+	text-align:center;
+	background:#fff;
+	display:block;
+	cursor:pointer;
+	}
+
+div.bb-sub {
+	width:100px;
+	}	
+
+
+
+
+/* -----------------------------------------
+   Images
+----------------------------------------- */
+
+.widget img {
+    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"] {
+    height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
+}
+img.size-full {
+    max-width: 97.5%;
+    width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
+}
+
+.wp-caption { max-width: 100%; }
+
+
+
+
+
+/* -----------------------------------------
+   Modals
+----------------------------------------- */
+
+
+#userpress_wiki_infobox {
+height:400px;
+margin-bottom:20px;
+}
+
+.infobox-modal {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  z-index: 99;
+  height: auto;
+  width: 300px;
+  background-color: white;
+  padding: 1.25rem;
+  border: solid 1px #666666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  top: 0px;
+  right:0px;
+  }
+
+.infobox {
+max-height:500px;
+}
+
+.infobox h4 {
+font-size:1em;
+margin-top:10px;
+}
+
+.infobox h5 {
+color:#666;
+margin-top:15px;
+margin-bottom:0;
+
+}
+
+
+.infobox li {
+font-size:0.7em;
+line-height:140%;
+}
+
+
+.close-reveal-modal.button {
+    font-size: inherit;
+    line-height: inherit;
+    position: relative;
+    color: #fff;
+    font-weight: normal;
+    cursor: pointer
+    }
+
+
+/* -----------------------------------------
+   Search
+----------------------------------------- */
+
+.search-result {
+	font-weight:bold;
+}
+.search-result a {
+	color:#111;
+	font-weight:bold;
+
+}
+
+
+
+
+/* -----------------------------------------
+   Featured Media
+----------------------------------------- */
+
+.featured-media {
+position:relative;
+padding:0 0 10px 0;
+	
+	}
+
+
+.featured-media img {
+width:100%;
+
+}
+
+.attachment-featured-image {
+padding:0 0 10px 0;
+border:1px solid #ddd;
+}
+.attachment-featured-thumbnail {
+border:1px solid #ddd;
+min-width:125px;
+}
+
+.featured-image-caption {
+	font-size:0.8em;
+	margin-bottom:30px;
+	text-align:left
+	color:#eee;	
+}
+
+
+
+
+
+
+/* -----------------------------------------
+   Typography
+----------------------------------------- */
+fieldset {
+padding:0;
+border:0;
+margin:0;
+}
+
+#item-actions h3 {
+	font-size:14px;
+}
+
+.post-meta {
+padding-top:25px;
+color:#666;
+padding-left:25px;
+border-right:1px dotted #ddd;
+margin-right:10px;
+}
+
+.post-meta p, .post-meta h5, .post-meta ul {
+font-size:0.6em;
+}
+
+
+.site-title {
+	font-size: 40px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding-bottom:0;
+	font-weight: bold;
+	letter-spacing:-0.04em;
+	line-height:140%;
+	color:#111;
+	clear:both;
+	letter-spacing:-0.03em;
+}
+
+
+
+.site-title .subheader {margin-bottom:0;}
+
+
+
+
+
+
+
+/* -----------------------------------------
+   Posts / Articles
+----------------------------------------- */
+
+.page-title, .page-title a {
+	font-size: 50px;
+	margin-top:0px;
+	padding-left:8px;
+	font-weight: bold;
+	letter-spacing:-0.04em;
+	line-height:125%;
+	color:#222;
+	clear:both;
+	letter-spacing:-0.03em;
+}
+
+h4.item-title a {
+margin-top:10px;
+font-weight:400;
+color:#333;
+}
+
+.subtitle {
+	margin-top:-5px;
+	font-size:1em; 
+	color:#666;
+	min-height:30px;
+	padding-left:13px;
+}
+
+
+
+.the-category {
+margin-top:5px;
+padding:0;
+margin-bottom:-8px;
+font-size:12px;
+text-transform:uppercase;
+}
+
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.author-box { border:1px dotted #ccc; padding:10px; margin:15px 0 15px 0;}
+.author-box p {font-size:14px; line-height:130%; margin:10px 0 10px 0;}
+
+.row.post,.row.page {
+max-width:550px;
+}
+article {
+padding-top:10px;
+}
+
+article .th {margin-bottom:10px; margin-bottom:1em;}
+
+article p {
+line-height:175%;
+}
+
+.alignleft {float:left;}
+.alignright {float:right;}
+.aligncenter {margin:0 auto;text-align:center;}
+
+
+
+
+
+
+/* -----------------------------------------
+   Comments
+----------------------------------------- */
+.comments-title {
+	text-align:right;
+	font-weight:normal;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #ccc;
+	padding:10px;
+	margin-bottom:20px;
+}
+
+.commentlist header  {
+font-size:20px;
+font-weight:bold;
+}
+.commentlist time {
+	font-size: 0.7em;
+	font-weight:normal;
+}
+
+.commentlist section {
+margin-left:70px;
+}
+
+
+
+
+
+
+/* -----------------------------------------
+   Sidebar
+----------------------------------------- */
+
+.sidebar {
+float:right;
+max-width:300px;
+padding-top:10px;
+border: 1px solid #ddd;
+background:#fcfcfc;
+}
+
+li, ul, ul li, ul ul, ul li ul, ul li ul li {
+list-style:none; margin-left:0; 
+}
+
+ol li {
+	list-style:decimal;
+}
+
+.sidebar ul li {list-style:none;}
+
+.useroptions {
+font-size:12px;
+margin-left:10px;
+}
+
+.alpha-column ul {
+list-style:none;
+margin-left:0;
+}
+.sidebar h5 {
+font-size:1.1em;
+font-weight:100;
+color:#111;
+text-transform:uppercase;
+font-weight:400;
+padding-left:20px;
+}
+
+.sidebar ul {
+font-size:0.8em;
+margin-top:-7px;
+}
+
+.sidebar ul li {
+padding-left:20px;
+}
+
+.sidebar .widget {
+border-bottom:1px solid #ddd;
+margin-bottom:15px;
+}
+
+.sidebar a {
+	font-weight:300;
+	color:#333;
+	}
+
+
+.sidebar a:hover {
+	color:#111;
+	}
+
+.sidebar p {
+font-size:0.7em;
+color:#333;
+}
+
+.sidebar select {
+border:1px solid #eee;
+font-size:0.7em;
+}
+
+.widget_userpress_wiki a.current {
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------
+   Wiki
+----------------------------------------- */
+
+.wp-dialog {
+    background: #fff;
+}
+
+
+
+.plugins a.delete:hover, #all-plugins-table .plugins a.delete:hover,
+#search-plugins-table .plugins a.delete:hover, .submitbox .submitdelete {
+    border-bottom-color: #FF0000;
+    color: #FF0000;
+}
+
+
+
+
+
+/* -----------------------------------------
+   Navbar
+----------------------------------------- */
+
+ 
+.top-bar {
+height:35px;
+background:none;
+}
+
+.top-bar-section ul li a {
+text-transform:uppercase;
+font-size:10px;
+}
+
+
+.top-bar-section li a:not(.button) {
+    padding: 0px 15px;
+    line-height: 45px;
+    background:#fff;
+}
+ 
+.top-bar-section ul li > a {
+    display: block;
+    width: 100%;
+    color: #444;
+    font-weight:100;
+    padding: 25px 0px 12px 15px;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.top-bar-section .dropdown li a {
+    color: #333;
+    line-height: 1;
+    white-space: nowrap;
+    padding: 12px 15px;
+    background: #eee;
+    border:1px solid #f2f2f2;
+}
+
+.top-bar .name {
+font-size: 16px; }
+
+.top-bar .name h1 {
+line-height: 35px;
+font-size: 1.1em;
+padding-top:5px;
+padding-left:3px;
+font-family: 'helvetica neue',arial,sans-serif;
+ margin: 0;
+ }
+
+.top-bar .name h1 a {
+font-weight: bold;
+color: #444;
+display: block;
+padding: 0 15px;
+}  
+
+
+.top-bar {
+padding-left:8px;
+}
+
+
+
+/* -----------------------------------------
+   Page Head
+----------------------------------------- */
+.page-head {
+border-bottom:1px solid #eee;
+margin-bottom:20px;
+padding-bottom:10px;
+}
+
+
+
+
+
+
+/* -----------------------------------------
+   bbPress
+----------------------------------------- */
+
+
+.bbp-pagination {
+padding-left:11px;
+}
+
+.bbp-topic-permalink {
+font-size:18px;
+}
+
+#bbpress-forums p.bbp-topic-meta {
+margin:0;
+color:#999;
+}
+
+p.bbp-topic-meta {
+line-height:135%;
+}
+#bbpress-forums ul.bbp-topics {
+border:0;
+}
+
+#bbpress-forums li.bbp-body ul.topic {
+border-top:1px solid #eee;
+}
+
+#bbpress-forums fieldset.bbp-form legend {
+font-size:18px;
+}
+
+#bbpress-forums fieldset.bbp-form {
+border:0;
+padding:0;
+}
+
+#bbpress-forums ul.bbp-forums {
+border:0;
+padding:0;
+}
+
+#bbpress-forums li.bbp-body ul.forum {
+border-top:1px solid #eee;
+}
+
+
+#bbpress-forums li.bbp-header {
+background:#eee;
+font-weight:bold;
+border-bottom:none;
+border-top:none;
+color:#666;
+}
+
+#bbpress-forums li.bbp-footer {
+background:#fff;
+font-weight:normal;
+border-top:none;
+}
+
+p.bbp-forum-title a {
+font-weight:normal;
+}
+
+p.bbp-forum-title {
+font-size:20px;
+margin-top:0px;
+margin-bottom:0;
+padding-left:5px;
+}
+
+li.bbp-forum-topic-count {
+width:20%;
+text-align:right;
+color:#999;
+}
+
+
+li.bbp-forum-freshness {
+text-align:left;
+padding-left:20px;
+}
+
+#bbpress-forums {
+padding:0;
+}
+
+.forum-titles {
+font-size:12px;
+}
+
+.bbp-breadcrumb p {
+margin:0;
+padding:0;
+}
+
+
+.bbp-topic-description .avatar, .bbp-topic-started-by .avatar, .bbp-topic-freshness-author .avatar, .bbp-forum-description .avatar {
+margin-top:-9px;
+}
+
+
+textarea.bbp-the-content {
+border:1px solid #ccc;
+}
+
+.bbp-body {
+border:1px solid #eee;
+}
+
+.bbp-body ul li {
+font-size:12px;
+}
+
+
+#bbpress-forums ul.even {
+background:#f8f8f8;
+}
+
+#bbpress-forums ul.odd {
+background:#fcfcfc;
+}
+
+ #bbpress-forums li.bbp-body ul.topic {
+ padding-left:13px;
+ }
+
+#bbpress-forums li.bbp-header {
+padding-left:13px;
+}
+
+div.bbp-breadcrumb {
+padding-left:10px;
+font-weight:100;
+}
+/* -----------------------------------------
+   BuddyPress
+----------------------------------------- */
+
+.page-title .button {
+font-size:0.4em;
+padding:10px;
+}
+
+.groups #item-header-content {
+margin-top:-90px;
+}
+
+.activity-header {
+margin-top:-10px;
+}
+
+.activity-header p {
+font-size:0.8em;
+}
+
+.activity-inner p {
+font-size:0.9em;
+}
+
+.groups .page-title {
+margin-bottom:30px;
+}
+.settings .page-title,{
+	display:none;
+}
+
+.forums #item-header, .settings #item-header, .notifications #item-header, .subscriptions #item-header, .activity #item-header-avatar, .activity #item-header-content, .profile #item-header-avatar, .profile #item-header-content {
+	display:none;
+}
+
+.forums .page-title, .settings .page-title, .notifications .page-title, .subscriptions .page-title, .activity .page-title, .profile .page-title {
+	display:none;
+}
+
+#latest-update {
+	line-height:140%;
+}
+#item-header-avatar {
+	float:left;
+	margin-right:20px;
+	width:100px;
+	}
+
+#item-header-content {
+	float:left;
+	max-width:470px;
+}
+
+.messages #item-header-content, .messages #item-header-avatar {
+	display:none;
+}
+
+#groups_search_submit, #messages_search_submit {
+display:none;
+}
+
+#group-dir-search, .message-search, #search-members-form {
+display:none;
+}
+
+
+#activity-filter-select label {
+display:none;
+}
+
+#object-nav , #item-nav{
+background:#f2f2f2;
+border:1px solid #eee;
+}
+
+#object-nav .selected a {
+color:fff;
+}
+
+
+#buddypress div.item-list-tabs ul li.current a {
+background-color: rgb(0, 140, 186);
+color: #fff;
+opacity: 1;
+font-weight: bold;
+}
+
+#buddypress div#subnav.item-list-tabs ul li.current a {
+background-color: #fff;
+color: rgb(0, 140, 186);
+opacity: 1;
+font-weight: bold;
+}
+
+#object-nav a:hover{
+background: #333;
+color:#fff;
+}
+
+#item-body {
+margin-top:-5px;
+}
+
+#buddypress div#subnav.item-list-tabs  {
+border-bottom:1px dotted #eee;
+margin-bottom:20px;
+ }
+
+#buddypress div#subnav.item-list-tabs ul li {
+font-size:13px;
+}
+
+table#bps_man_subs, table#bps_whats_new  {
+border:0;
+}
+/* -----------------------------------------
+   Footer
+----------------------------------------- */
+
+.footer {
+border-top:1px solid #eee;
+background:#fff;
+padding-top:10px;
+height:40px;
+margin-top:30px;
+}
+
+.footer p {
+font-size:12px;
+}
+
+
+
+
+
+
+/* -----------------------------------------
+   Mobile / Responsive Design
+   
+   Everything in this section will override 
+   the preceeding, standard desktop layout
+----------------------------------------- */
+
+
+@media only screen and (max-width: 942px) {
+   
+
+    
+    .featured-media {
+    margin-bottom:0;
+    }
+} /* end media query */
+
+
+
+
+@media only screen and (max-width: 480px) {
+
+	.main-wrapper {
+	padding:10px;
+	}
+   
+
+} /* end media query */
+

@@ -1,0 +1,17 @@
+UserPress 1.1.3
+
+WORKING
+- wp_editor works
+- bp-subscriptions works
+- dropdowns on the right hand side of the navbar work
+
+
+
+NOT WORKING
+- Title Suggestions
+- Tag autocompletion
+- left hand / wp menu dropdowns are not working
+
+
+DISABLED
+- wiki modal has been disabled for the time being
